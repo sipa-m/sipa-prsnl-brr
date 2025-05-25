@@ -1,0 +1,270 @@
+<style>
+     {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #68BBE3;
+      padding: 1rem 0;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      background-color: #ABD7EB;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .about {
+      position: relative;
+      padding: 4rem 2rem;
+      background-color: #eef7ff;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .about::before,
+    .about::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      z-index: 0;
+      transition: all 0.5s ease;
+    }
+
+    .about::before {
+      top: -60px;
+      left: -60px;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, #91d6ff 0%, #e0f7ff 100%);
+    }
+
+    .about::after {
+      bottom: -80px;
+      right: -80px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, #72c5ff 0%, #d8f0ff 100%);
+    }
+
+    .about:hover::before {
+      transform: scale(1.2) translate(15px, 15px);
+      background: radial-gradient(circle, #5bbdff 0%, #ccedff 100%);
+    }
+
+    .about:hover::after {
+      transform: scale(1.2) translate(-15px, -15px);
+      background: radial-gradient(circle, #3ab2ff 0%, #c1eaff 100%);
+    }
+
+    .about * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .tentang-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn {
+      background-color: #07345d;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .portfolio {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .portfolio h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .portfolio-item {
+      width: 250px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .testimonials {
+      background-color: #3d85c6;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .testimonials h2 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .activity-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .activity-grid img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+
+    .contact {
+      padding: 30px 20px;
+      background-color: #f4f4f4;
+    }
+
+    .contact h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact label {
+      margin: 10px 0 5px;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 8px;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact button {
+      background-color: #07345d;
+      color: white;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #07345d;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .activity-grid img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
